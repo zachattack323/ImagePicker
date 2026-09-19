@@ -18,7 +18,7 @@ Repository: [zachattack323/ImagePicker](https://github.com/zachattack323/ImagePi
 ## Before submission
 
 1. README.txt includes Zachary Hixon and zachary.j.hixon@vanderbilt.edu in the required author section.
-2. Review the 79-word reflection and feedback so they reflect your experience.
+2. The reflection in README.txt uses my own wording and stays under 100 words.
 3. Collection sharing is still unimplemented. README.txt documents this
    requirement gap; the repository is not claiming a fully complete challenge.
 4. ImagePicker was created as a standalone GitHub repository. GitHub does not
