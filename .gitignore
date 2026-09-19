@@ -1,0 +1,39 @@
+# Dependencies and local Python environments
+node_modules/
+.venv*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Builds, generated packages, and test output
+dist/
+build/
+artifacts/
+*.zip
+*.log
+coverage/
+.coverage
+playwright-report/
+test-results/
+
+# User data and downloaded model weights
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+uploads/
+.cache/
+*.safetensors
+*.pt
+*.pth
+
+# Credentials, machine settings, and editor state
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/

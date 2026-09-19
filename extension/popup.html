@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Save to ImageShare</title>
+  <link rel="stylesheet" href="popup.css"/>
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <header><div class="brand"><img src="icons/icon32.png" alt=""/>ImageShare</div><a id="open-app" href="http://127.0.0.1:5173/" target="_blank" rel="noreferrer">Open app ↗</a></header>
+  <main>
+    <h1>Save an image</h1>
+    <p class="intro">Choose an image and a board. Search for it later in ImageShare.</p>
+    <div id="connection" role="status">Connecting to ImageShare…</div>
+    <button id="retry" class="secondary" type="button" hidden>Retry connection</button>
+    <p id="error" role="alert" hidden></p>
+    <div id="preview-box" hidden><img id="preview" alt="Selected image" referrerpolicy="no-referrer"/><p id="preview-error" hidden>Preview unavailable. You can still save the link.</p></div>
+    <form id="save-form">
+      <label for="url">Image URL</label>
+      <input id="url" name="url" type="url" maxlength="2048" placeholder="https://example.com/photo.jpg" required/>
+      <button id="find-images" type="button" class="secondary">Choose an image from this page</button>
+      <p id="page-message" role="status" hidden></p>
+      <div id="page-images" aria-label="Images on this page" hidden></div>
+      <label for="title">Title</label>
+      <input id="title" name="title" maxlength="150" placeholder="Give the image a name" required/>
+      <div class="label-row"><label for="board">Board</label><button type="button" id="toggle-new-board" class="text-button">New board</button></div>
+      <select id="board" name="board" required disabled><option value="">Loading boards…</option></select>
+      <div id="new-board-fields" hidden><label for="board-name">New board name</label><div class="inline"><input id="board-name" maxlength="100" placeholder="e.g. Travel"/><button id="create-board" type="button">Create</button></div></div>
+      <label for="notes">Notes <span>(optional)</span></label>
+      <textarea id="notes" name="notes" rows="2" maxlength="2000"></textarea>
+      <button id="save" type="submit" disabled>Save to board</button>
+    </form>
+    <div id="success" role="status" hidden><strong>Saved to your board.</strong><p>ImageShare will prepare it for semantic search. Check the app for indexing status.</p><button id="save-another" class="secondary" type="button">Save another image</button></div>
+    <p class="footnote">ImageShare must be running on this computer. Public image links work best; protected images may need to be uploaded in the app.</p>
+  </main>
+</body>
+</html>
